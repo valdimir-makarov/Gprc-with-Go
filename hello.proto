@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package hello;
+
+option go_package = "github.com/valdimir-makarov/Gprc-with-Go"; // Replace with your actual Go module path
+
+// Define the service
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloResponse);
+}
+
+// Define the request message
+message HelloRequest {
+  string name = 1;
+}
+
+// Define the response message
+message HelloResponse {
+  string message = 1;
+}
